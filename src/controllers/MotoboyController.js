@@ -151,7 +151,7 @@ class MotoboyController {
     let result;
 
     // Status validation
-    if (!status.length)
+    if (!status || !status.length)
       return res
         .status(400)
         .json({ message: 'O status não pode estar vazio.' });
@@ -279,8 +279,8 @@ class MotoboyController {
         }
       } catch (error) {
         console.log(error);
-        return res.status(500).json({
-          message: 'Um erro inesperado ocorreu. Por favor, tente novamente.',
+        return res.status(401).json({
+          message: 'Falha ao autenticar.',
         });
       }
     }
