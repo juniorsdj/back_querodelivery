@@ -63,7 +63,7 @@ back_querodelivery$ export GOOGLE_APPLICATION_CREDENTIALS="./querodelivery-9123.
 
 ## 05. Iniciar servidor
 ```bash
-back_querodelivery$ node src/index
+back_querodelivery$ yarn start
 ```
 
 <br>
